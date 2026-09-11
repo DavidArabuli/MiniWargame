@@ -17,6 +17,7 @@ namespace MiniWargame
         private const int TileSize = 50;
         private const int BoardWidth = 10;
         private const int BoardHeight = 8;
+        private const int Spacing = 100;
 
         public MainWindow()
         {
@@ -28,27 +29,29 @@ namespace MiniWargame
         // Creates the tiles
         private void CreateBoard()
         {
-            for (int y = 0; y < BoardHeight; y++)
+            for (int x = 0; x < 2; x++)
             {
-                for (int x = 0; x < BoardWidth; x++)
+                for (int y = 0; y < 2; y++)
                 {
-                    Border tile = new Border();
+                    Ellipse spot = new Ellipse();
+                    spot.Width = 10;
+                    spot.Height = 10;
 
-                    tile.Width = TileSize;
-                    tile.Height = TileSize;
+                    Canvas.SetLeft(spot, Spacing * x);
+                    Canvas.SetTop(spot, Spacing * y);
 
-                    tile.BorderBrush = Brushes.Black;
-                    tile.BorderThickness = new Thickness(1);
-                    tile.Background = Brushes.LightGray;
-
-                    Canvas.SetLeft(tile, x * TileSize);
-                    Canvas.SetTop(tile, y * TileSize);
-
-                    GameBoard.Children.Add(tile);
-                    
+                    spot.Fill = Brushes.Black;
+                    GameBoard.Children.Add(spot);
                 }
+                
+
             }
             
+        }
+        private void GameBoard_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            Point mousePosition = e.GetPosition(GameBoard);
+            MessageBox.Show($"X: {mousePosition.X}, Y: {mousePosition.Y}");
         }
 
         private void PlayButton_Click(object sender, RoutedEventArgs e)

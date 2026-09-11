@@ -16,7 +16,14 @@
             <ColumnDefinition Width="100"/>
             
         </Grid.ColumnDefinitions>
-        <Canvas Grid.Column="0" x:Name="GameBoard">
+        <Canvas Grid.Column="0"
+        x:Name="GameBoard"
+        Width="200"
+        Height="200"
+        Background="Transparent"
+        HorizontalAlignment="Center"
+        VerticalAlignment="Center"
+        MouseLeftButtonDown="GameBoard_MouseLeftButtonDown">
 
             <TextBlock x:Name="GameOverText"
 Grid.Column="0"
