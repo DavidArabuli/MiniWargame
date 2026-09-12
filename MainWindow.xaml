@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MiniWargame"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="650" Width="900">
     <Grid>
         <Grid.ColumnDefinitions>
             
@@ -18,8 +18,8 @@
         </Grid.ColumnDefinitions>
         <Canvas Grid.Column="0"
         x:Name="GameBoard"
-        Width="200"
-        Height="200"
+        Width="500"
+        Height="500"
         Background="Transparent"
         HorizontalAlignment="Center"
         VerticalAlignment="Center"
@@ -44,7 +44,8 @@ Canvas.Top="350"
 Margin="0,0,0,30"
 Visibility="Collapsed" />
 
-            <Rectangle x:Name="Player" Grid.Column="0" Width="50" Height="50" Fill="Red" Canvas.Left="100" Canvas.Top="100" Panel.ZIndex="100"/>
+            <Rectangle x:Name="Player" Grid.Column="0" Width="50" Height="50" Fill="Red" Canvas.Left="85"
+Canvas.Top="85" Panel.ZIndex="100"/>
         </Canvas>
     
         <StackPanel Grid.Column="1" 
