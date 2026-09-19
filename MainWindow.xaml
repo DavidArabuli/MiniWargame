@@ -25,27 +25,16 @@
         VerticalAlignment="Center"
         MouseLeftButtonDown="GameBoard_MouseLeftButtonDown">
 
-            <TextBlock x:Name="GameOverText"
-Grid.Column="0"
-Text="GAME OVER"
-FontSize="32"
-FontWeight="Bold"
-Canvas.Left="100"
-Canvas.Top="350"
-Margin="0,0,0,30"
-Visibility="Collapsed" />
-            <TextBlock x:Name="FightText"
-Grid.Column="0"
-Text="You started the fight!"
-FontSize="32"
-FontWeight="Bold"
-Canvas.Left="100"
-Canvas.Top="350"
-Margin="0,0,0,30"
-Visibility="Collapsed" />
+            <TextBlock x:Name="GameMessageText"
+           Grid.Column="0"
+           FontSize="32"
+           FontWeight="Bold"
+           Canvas.Left="100"
+           Canvas.Top="350"
+           Margin="0,0,0,30"
+           Visibility="Collapsed" />
 
-            <Rectangle x:Name="Player" Grid.Column="0" Width="50" Height="50" Fill="Red" Canvas.Left="85"
-Canvas.Top="85" Panel.ZIndex="100"/>
+            
         </Canvas>
     
         <StackPanel Grid.Column="1" 
@@ -55,19 +44,32 @@ Canvas.Top="85" Panel.ZIndex="100"/>
             Width="100" 
             Height="50" 
             Margin="5"
-            Click="PlayButton_Click"/>
+            Click="PlayButtonClick"/>
             <Button Content="QUIT" 
             Width="100" 
             Height="50" 
             Margin="5"
-                    Click="QuitButton_Click"/>
+                    Click="QuitButtonClick"/>
             <Button x:Name="FightButton"
             Content="FIGHT"
             Width="100" 
             Height="50" 
             Margin="5"
             IsEnabled="False"
-            Click="FightButton_Click"/>
+            Click="FightButtonClick"/>
+
+            <Button x:Name="RestartButton"
+        Content="RESTART"
+        Width="100"
+        Height="50"
+        Margin="5"
+        Click="RestartButtonClick"/>
+        <!--<Button x:Name="InventoryButton"
+        Content="INVENTORY"
+        Width="100"
+        Height="50"
+        Margin="5"
+        Click="InventoryButton_Click"/>-->
 
         </StackPanel>
     </Grid>

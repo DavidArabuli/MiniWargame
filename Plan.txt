@@ -1,0 +1,21 @@
+Player - as a side. Can see board, armies, cities. Can make actions.
+Player plays as an army froim the start.
+Player has cities, armies and resources (just gold for now). 
+Player can move or attack AI armies and cities.
+
+Enemy - AI - has cities only for now. Later will have armies. 
+Will be passive for now. Later will be able to field armies and attack.
+
+Cities - have location, name, strength, and economy - they produce gold each turn.
+
+Cities will have an ownership flag. For now it will be only player owned vs AI (enemy) owned.
+
+Player can hire armies in cities. 
+Player`s army has strength, location, and can move or attack.
+Player`s army strength is increased when he hires armies in cities.
+
+--
+On the app level:
+City is a class with properties for location, name, strength, economy, and ownership. The player will have a list of cities they own, and the AI will have its own list of cities.
+Player is a class, with properties for their army and resources (gold). 
+The player can perform actions (class methods) such as moving armies, attacking enemy cities, and hiring new armies in their own cities.
